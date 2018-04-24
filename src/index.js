@@ -1,6 +1,6 @@
 class Eqio {
   constructor(el) {
-    if (!el) {
+    if (!el || !('IntersectionObserver' in window)) {
       return;
     }
 

@@ -3,8 +3,7 @@ module.exports = {
   npm: {
     esModules: true,
     umd: {
-      global: 'eqio',
-      externals: {}
+      global: 'Eqio',
     }
   }
-}
+};

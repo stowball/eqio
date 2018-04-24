@@ -115,4 +115,4 @@ class Eqio {
   }
 }
 
-export default Eqio;
+module.exports = Eqio;

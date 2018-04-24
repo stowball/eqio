@@ -1,0 +1,29 @@
+{
+  "name": "eqio",
+  "version": "0.0.0",
+  "description": "A simple, tiny alternative to element/container queries",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build-web-module": "nwb build-web-module",
+    "build": "npm-run-all lint build-web-module",
+    "clean": "nwb clean-module",
+    "lint": "eslint src"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.1.0",
+    "npm-run-all": "^4.0.2",
+    "nwb": "0.18.x"
+  },
+  "author": "Matt Stow <matt@mattstow.com>",
+  "homepage": "http://mattstow.com",
+  "license": "MIT",
+  "repository": "https://github.com/stowball/eqio"
+}

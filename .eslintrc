@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "module": true,
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "arrow-parens": 2,
+    "brace-style": [2, "stroustrup"],
+    "indent": [2, 2],
+    "no-else-return": 2,
+    "semi": [2, "always"]
+  }
+}

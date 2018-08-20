@@ -69,7 +69,7 @@ The above component will:
 
 * be able to be customised when *its* width is 400 or smaller (`"<"` is a synonym for `max-width`, not “less than”).
 * be able to be customised when *its* width is 700 or greater (`">"` is a synonym for `min-width`, not “greater than”).
-* apply the following classes `media-object-eqio-<400` and `media-object-eqio->700` as appropriate. If `data-eqio-prefix` had not been specified, the applied classes would be `eqio-<400` and `eqio->700`.
+* apply the following classes `media-object-eqio-lt-400` and `media-object-eqio-gt-700` as appropriate. If `data-eqio-prefix` had not been specified, the applied classes would be `eqio-lt-400` and `eqio-gt-700`.
 
 *Note: Multiple classes can be applied at once.*
 
@@ -78,17 +78,16 @@ The above component will:
 In your CSS, write class names that match those applied to the HTML.
 
 ```scss
-.media-object-eqio-\<400 {
+.media-object-eqio-lt-400 {
   /* customizations when less than or equal to 400px */
 }
 
-.media-object-eqio-\>700 {
+.media-object-eqio-gt-700 {
   /* customizations when greater than or equal to 700px */
 }
 ```
 
 *Note:*
-* *eqio classes include the special characters `<` & `>`, so they must be escaped with a `\` in your CSS.*
 * *eqio elements are `position: relative` by default, but your component can override that to `absolute`/`fixed` etc as required.*
 * *eqio elements can't be anything but `overflow: visible`.*
 

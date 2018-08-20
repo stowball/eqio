@@ -72,20 +72,21 @@ class Eqio {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const size = entry.target.dataset.eqioSize;
+          const cssSafeSize = this.replaceOperators(size);
 
           if (size.indexOf('>') === 0) {
             if (entry.intersectionRatio === 1) {
-              this.el.classList.add(`${className}${size}`);
+              this.el.classList.add(`${className}${cssSafeSize}`, `${className}${size}`);
             }
             else {
-              this.el.classList.remove(`${className}${size}`);
+              this.el.classList.remove(`${className}${cssSafeSize}`, `${className}${size}`);
             }
           }
           else if (entry.intersectionRatio === 1) {
-            this.el.classList.remove(`${className}${size}`);
+            this.el.classList.remove(`${className}${cssSafeSize}`, `${className}${size}`);
           }
           else {
-            this.el.classList.add(`${className}${size}`);
+            this.el.classList.add(`${className}${cssSafeSize}`, `${className}${size}`);
           }
         }
       });
@@ -112,6 +113,12 @@ class Eqio {
     delete this.observer;
     delete this.sizesArray;
     delete this.triggerEls;
+  }
+
+  replaceOperators(string) {
+    string = string.replace('>', 'gt-');
+    string = string.replace('<', 'lt-');
+    return string;
   }
 }
 

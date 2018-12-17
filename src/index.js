@@ -70,18 +70,18 @@ class Eqio {
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const size = entry.target.dataset.eqioSize;
+        const size = entry.target.dataset.eqioSize;
 
-          if (size.indexOf('>') === 0) {
-            if (entry.intersectionRatio === 1) {
-              this.el.classList.add(`${className}${size}`);
-            }
-            else {
-              this.el.classList.remove(`${className}${size}`);
-            }
+        if (size.indexOf('>') === 0) {
+          if (entry.intersectionRatio === 1) {
+            this.el.classList.add(`${className}${size}`);
           }
-          else if (entry.intersectionRatio === 1) {
+          else {
+            this.el.classList.remove(`${className}${size}`);
+          }
+        }
+        else {
+          if (entry.intersectionRatio === 1) {
             this.el.classList.remove(`${className}${size}`);
           }
           else {

@@ -1,9 +1,10 @@
 class Eqio {
-  constructor(el) {
+  constructor(el, callback) {
     if (!el || !('IntersectionObserver' in window)) {
       return;
     }
 
+    this.callback = callback;
     this.init(el);
   }
 
@@ -89,6 +90,10 @@ class Eqio {
           }
         }
       });
+      
+      if (this.callback) {
+        this.callback();
+      }
     };
 
     this.observer = new IntersectionObserver(observerCallback, observerOptions);

@@ -91,6 +91,7 @@ In your CSS, write class names that match those applied to the HTML.
 * *eqio classes include the special characters `<` & `>`, so they must be escaped with a `\` in your CSS.*
 * *eqio elements are `position: relative` by default, but your component can override that to `absolute`/`fixed` etc as required.*
 * *eqio elements can't be anything but `overflow: visible`.*
+* To prevent accidental creation of horizontal scrollbars, a parent element is required to `overflow-x: hidden`. It is recommended to apply this to `body`.
 
 ### The JavaScript
 

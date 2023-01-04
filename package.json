@@ -20,7 +20,7 @@
     "babel-eslint": "^7.2.3",
     "eslint": "^4.1.0",
     "npm-run-all": "^4.0.2",
-    "nwb": "0.18.x"
+    "nwb": "0.25.x"
   },
   "author": "Matt Stow <matt@mattstow.com>",
   "homepage": "http://mattstow.com",
